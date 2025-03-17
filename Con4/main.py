@@ -1,11 +1,9 @@
 import os
 
-# Initialize the board
 board = {i: [None] * 6 for i in range(7)}
 turn_count = 0
 MAX_COUNT = 42
 
-# Input player names
 player_1_name = input("What is player one's name: ")
 player_2_name = input("What is player two's name: ")
 
@@ -75,11 +73,9 @@ def user_move(player):
         except ValueError:
             print("Please enter a valid integer.")
 
-# Initialize players
 player_1 = User(player_1_name, "X")
 player_2 = User(player_2_name, "O")
 
-# Game loop
 current_player = player_1
 
 while turn_count < MAX_COUNT:
